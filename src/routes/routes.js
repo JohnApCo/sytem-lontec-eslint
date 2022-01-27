@@ -4,8 +4,7 @@ import { Navigate, useRoutes } from 'react-router-dom';
 import DashboardLayout from '../components/layouts/dashboard';
 import ForgotPassword from '../components/views/ForgotPassword';
 //
-import Login from '../components/views/login/Login';
-import Login2 from '../components/views/login/Login2';
+import Login3 from '../components/views/login/Login3';
 import Page404 from '../components/views/Page404';
 import Register from '../components/views/Register';
 import UserProfile from '../components/views/UserProfile';
@@ -28,7 +27,7 @@ export default function Router() {
     },
     {
       path: '/login',
-      element: <Login2 />
+      element: <Login3 />
     },
     {
       path: '/forgot-password',

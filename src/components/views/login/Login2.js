@@ -1,22 +1,12 @@
 import { Link as RouterLink } from 'react-router-dom';
 // material
 import { styled } from '@mui/material/styles';
-import {
-  Card,
-  Stack,
-  Link,
-  Container,
-  Typography,
-  Box,
-  Grid
-} from '@mui/material';
-// layouts
-import AuthLayout from '../../layouts/AuthLayout';
+import { Card, Stack, Link, Typography, Box, Grid } from '@mui/material';
 // components
 import Page from '../../common/Page';
 import LoginForm from './LoginForm';
 import AuthSocial from '../AuthSocial';
-import LogoOnlyLayout from '../../layouts/LogoOnlyLayout';
+import Logo2 from '../../common/Logo2';
 
 // ----------------------------------------------------------------------
 const FlexBox = styled(Box)(() => ({
@@ -28,25 +18,20 @@ const JustifyBox = styled(FlexBox)(() => ({
   justifyContent: 'center'
 }));
 
-const ContentBox = styled(Box)(() => ({
+const ContentBox = styled(Box)(({ theme }) => ({
   height: '100%',
-  padding: '32px',
   position: 'relative',
-  background: 'rgba(0, 0, 0, 0.01)'
+  /* background: 'rgba(0, 0, 0, 0.01)', */
+  [theme.breakpoints.down('md')]: {
+    padding: theme.spacing(0, 2, 2, 2)
+  },
+  [theme.breakpoints.up('md')]: {
+    padding: theme.spacing(0, 3, 3, 3)
+  }
 }));
 
 const IMG = styled('img')(() => ({
   width: '100%'
-}));
-
-const RootStyle2 = styled(JustifyBox)(() => ({
-  background: '#1A2038',
-  minHeight: '100% !important',
-  '& .card': {
-    maxWidth: 800,
-    borderRadius: 12,
-    margin: '1rem'
-  }
 }));
 
 const RootStyle = styled(Page)(({ theme }) => ({
@@ -56,60 +41,47 @@ const RootStyle = styled(Page)(({ theme }) => ({
   justifyContent: 'center',
   backgroundColor: '#1A2038',
   '& .card': {
-    maxWidth: 800,
+    /*     maxWidth: 800,
     borderRadius: 12,
-    margin: '1rem'
+    margin: theme.spacing(2, 2) */
+    width: '100%',
+    maxWidth: 400,
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    margin: theme.spacing(2)
   }
-}));
-
-const SectionStyle = styled(Card)(({ theme }) => ({
-  width: '100%',
-  maxWidth: 464,
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  margin: 'auto',
-  padding: theme.spacing(4, 2),
-  '& .card': {
-    maxWidth: 800,
-    borderRadius: 12,
-    margin: '1rem'
-  }
-}));
-
-const ContentStyle = styled('div')(({ theme }) => ({
-  maxWidth: 480,
-  margin: 'auto',
-  display: 'flex',
-  minHeight: '100vh',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  padding: theme.spacing(0, 0)
 }));
 
 // ----------------------------------------------------------------------
 
 export default function Login2() {
   return (
-    <RootStyle>
+    <RootStyle title="Login | LontecIoT">
       <Card className="card">
-        <Grid container>
-          <Grid item lg={5} md={5} sm={5} xs={12}>
-            <JustifyBox p={4} height="100%">
-              <IMG src="/static/illustrations/logo.png" alt="" />
+        <Grid container direction="column">
+          <Grid>
+            <JustifyBox p={3} height="100%">
+              {/* <IMG src="/static/illustrations/logo.png" alt="" /> */}
+              <Logo2 />
             </JustifyBox>
           </Grid>
           <Grid item lg={7} md={7} sm={7} xs={12}>
             <ContentBox>
-              {/* <Stack sx={{ mb: 5 }}>
+              <Stack
+                sx={{ mb: 3 }}
+                alignItems="center"
+                justifyContent="center"
+                /* spacing={1} */
+              >
                 <Typography variant="h4" gutterBottom>
-                  Sign in to Minimal
+                  Hi, Welcome Back
                 </Typography>
                 <Typography sx={{ color: 'text.secondary' }}>
-                  Enter your details below.
+                  Enter your credentials to continue
                 </Typography>
-              </Stack> */}
-              {/* <AuthSocial /> */}
+              </Stack>
+              <AuthSocial />
 
               <LoginForm />
 
