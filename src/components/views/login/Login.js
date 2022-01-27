@@ -8,6 +8,7 @@ import AuthLayout from '../../layouts/AuthLayout';
 import Page from '../../common/Page';
 import LoginForm from './LoginForm';
 import AuthSocial from '../AuthSocial';
+import LogoOnlyLayout from '../../layouts/LogoOnlyLayout';
 
 // ----------------------------------------------------------------------
 
@@ -15,7 +16,7 @@ const RootStyle = styled(Page)(({ theme }) => ({
   [theme.breakpoints.up('md')]: {
     display: 'flex'
   },
-  backgroundColor: theme.palette.secondary.main
+  background: '#1A2038'
 }));
 
 const SectionStyle = styled(Card)(({ theme }) => ({
@@ -43,7 +44,7 @@ const ContentStyle = styled('div')(({ theme }) => ({
 export default function Login() {
   return (
     <RootStyle title="Login | LontecIoT">
-      {/*       <AuthLayout>
+      {/* <AuthLayout>
         Don’t have an account? &nbsp;
         <Link
           underline="none"
@@ -54,6 +55,7 @@ export default function Login() {
           Get started
         </Link>
       </AuthLayout> */}
+      <LogoOnlyLayout />
 
       {/*      <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
         <SectionStyle>
