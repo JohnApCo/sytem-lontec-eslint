@@ -31,11 +31,12 @@ export default function ForgotPassword() {
               /* spacing={1} */
             >
               <Typography variant="h4" gutterBottom>
-                Forgot your password?
+                Olvidaste tu contraseña?
               </Typography>
               <Typography sx={{ color: 'text.secondary' }}>
-                Please enter the email address associated with your account and
-                We will email you a link to reset your password.
+                Ingrese la dirección de correo electrónico asociada con su
+                cuenta y le enviaremos por correo electrónico un enlace para
+                restablecer su contraseña.
               </Typography>
             </Stack>
             {/* <AuthSocial /> */}

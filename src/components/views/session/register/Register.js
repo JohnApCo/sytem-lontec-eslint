@@ -45,7 +45,7 @@ export default function Login() {
               <Typography variant="body2" align="center" sx={{ mt: 3 }}>
                 Ya tienes una cuenta?&nbsp;
                 <Link variant="subtitle2" component={RouterLink} to="/login">
-                  Inicia sesión
+                  Iniciar sesión
                 </Link>
               </Typography>
             </Box>

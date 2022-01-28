@@ -22,7 +22,7 @@ export default function ForgotPasswordForm() {
     },
     validationSchema: RegisterSchema,
     onSubmit: () => {
-      navigate('/dashboard', { replace: true });
+      navigate('/dashboard', { replace: false });
     }
   });
 
@@ -36,7 +36,7 @@ export default function ForgotPasswordForm() {
             fullWidth
             autoComplete="username"
             type="email"
-            label="Email address"
+            label="Correo electrónico"
             {...getFieldProps('email')}
             error={Boolean(touched.email && errors.email)}
             helperText={touched.email && errors.email}
@@ -49,7 +49,7 @@ export default function ForgotPasswordForm() {
             variant="contained"
             loading={isSubmitting}
           >
-            Register
+            Reset Password
           </LoadingButton>
         </Stack>
       </Form>
