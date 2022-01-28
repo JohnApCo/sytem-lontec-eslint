@@ -2,12 +2,12 @@ import { Navigate, useRoutes } from 'react-router-dom';
 
 // layouts
 import DashboardLayout from '../components/layouts/dashboard';
-import ForgotPassword from '../components/views/ForgotPassword';
 //
-import Login3 from '../components/views/login/Login3';
+import Login from '../components/views/session/login/Login';
 import Page404 from '../components/views/Page404';
-import Register from '../components/views/Register';
+import Register from '../components/views/session/register/Register';
 import UserProfile from '../components/views/UserProfile';
+import ForgotPassword from '../components/views/session/forgotPassword/ForgotPassword';
 
 // ----------------------------------------------------------------------
 
@@ -27,7 +27,7 @@ export default function Router() {
     },
     {
       path: '/login',
-      element: <Login3 />
+      element: <Login />
     },
     {
       path: '/forgot-password',
