@@ -28,7 +28,7 @@ import MHidden from '../../common/MHidden';
 
 // ----------------------------------------------------------------------
 
-const DRAWER_WIDTH = 280;
+const DRAWER_WIDTH = 260; /* 280 */
 
 const RootStyle = styled('div')(({ theme }) => ({
   [theme.breakpoints.up('lg')]: {
@@ -74,12 +74,16 @@ export default function DashboardSidebar({ isOpenSidebar, onCloseSidebar }) {
       }}
     >
       <Box sx={{ px: 2.5, py: 3 }}>
-        <Box component={RouterLink} to="/" sx={{ display: 'inline-flex' }}>
+        <Box
+          component={RouterLink}
+          to="/"
+          sx={{ display: 'flex' /* 'inline-flex' */ }}
+        >
           <Logo2 />
         </Box>
       </Box>
 
-      <Box sx={{ mb: 5, mx: 2.5 }}>
+      {/*       <Box sx={{ mb: 5, mx: 2.5 }}>
         <Link underline="none" component={RouterLink} to="#">
           <AccountStyle>
             <Avatar src={account.photoURL} alt="photoURL" />
@@ -93,7 +97,7 @@ export default function DashboardSidebar({ isOpenSidebar, onCloseSidebar }) {
             </Box>
           </AccountStyle>
         </Link>
-      </Box>
+      </Box> */}
 
       <NavSection navConfig={sidebarConfig} />
 

@@ -11,12 +11,13 @@ import MHidden from '../../common/MHidden';
 
 // ----------------------------------------------------------------------
 
-const DRAWER_WIDTH = 280;
+const DRAWER_WIDTH = 260; /* 280 */
 const APPBAR_MOBILE = 64;
-const APPBAR_DESKTOP = 92;
+const APPBAR_DESKTOP = 64; /* 92 */
 
 const RootStyle = styled(AppBar)(({ theme }) => ({
-  boxShadow: 'none',
+  /* boxShadow: 'none', */
+  boxShadow: theme.customShadows.z8,
   backdropFilter: 'blur(6px)',
   WebkitBackdropFilter: 'blur(6px)', // Fix on Mobile
   backgroundColor: alpha(theme.palette.background.default, 0.72),
@@ -55,7 +56,7 @@ export default function DashboardNavbar({ onOpenSidebar }) {
           </IconButton>
         </MHidden>
 
-        <Searchbar />
+        {/* <Searchbar /> */}
         <Box sx={{ flexGrow: 1 }} />
 
         <Stack

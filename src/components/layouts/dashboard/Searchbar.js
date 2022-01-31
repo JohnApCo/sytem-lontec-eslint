@@ -14,7 +14,7 @@ import { Search } from '@mui/icons-material';
 // ----------------------------------------------------------------------
 
 const APPBAR_MOBILE = 64;
-const APPBAR_DESKTOP = 92;
+const APPBAR_DESKTOP = 64; /* 92 */
 
 const SearchbarStyle = styled('div')(({ theme }) => ({
   top: 0,
