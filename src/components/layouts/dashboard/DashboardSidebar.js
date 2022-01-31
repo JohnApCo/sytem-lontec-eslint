@@ -99,7 +99,7 @@ export default function DashboardSidebar({ isOpenSidebar, onCloseSidebar }) {
 
       <Box sx={{ flexGrow: 1 }} />
 
-      <Box sx={{ px: 2.5, pb: 3, mt: 10 }}>
+      {/*       <Box sx={{ px: 2.5, pb: 3, mt: 10 }}>
         <Stack
           alignItems="center"
           spacing={3}
@@ -135,7 +135,7 @@ export default function DashboardSidebar({ isOpenSidebar, onCloseSidebar }) {
             Upgrade to Pro
           </Button>
         </Stack>
-      </Box>
+      </Box> */}
     </Scrollbar>
   );
 
@@ -145,8 +145,14 @@ export default function DashboardSidebar({ isOpenSidebar, onCloseSidebar }) {
         <Drawer
           open={isOpenSidebar}
           onClose={onCloseSidebar}
-          PaperProps={{
+          /*           PaperProps={{
             sx: { width: DRAWER_WIDTH }
+          }} */
+          sx={{
+            '& .MuiDrawer-paper': {
+              width: DRAWER_WIDTH,
+              backgroundColor: 'rgb(33, 43, 54)'
+            }
           }}
         >
           {renderContent}
@@ -157,10 +163,16 @@ export default function DashboardSidebar({ isOpenSidebar, onCloseSidebar }) {
         <Drawer
           open
           variant="persistent"
-          PaperProps={{
+          /*           PaperProps={{
             sx: {
               width: DRAWER_WIDTH,
               bgcolor: 'background.default'
+            }
+          }} */
+          sx={{
+            '& .MuiDrawer-paper': {
+              width: DRAWER_WIDTH,
+              backgroundColor: 'rgb(22, 28, 36)'
             }
           }}
         >

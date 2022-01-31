@@ -7,6 +7,7 @@ import { Menu } from '@mui/icons-material';
 //
 import Searchbar from './Searchbar';
 import AccountPopover from './AccountPopover';
+import MHidden from '../../common/MHidden';
 
 // ----------------------------------------------------------------------
 
@@ -42,11 +43,7 @@ export default function DashboardNavbar({ onOpenSidebar }) {
   return (
     <RootStyle>
       <ToolbarStyle>
-        <Box
-          sx={{
-            display: { lg: 'none', xs: 'block' }
-          }}
-        >
+        <MHidden width="lgUp">
           <IconButton
             onClick={onOpenSidebar}
             sx={{
@@ -56,7 +53,7 @@ export default function DashboardNavbar({ onOpenSidebar }) {
           >
             <Menu />
           </IconButton>
-        </Box>
+        </MHidden>
 
         <Searchbar />
         <Box sx={{ flexGrow: 1 }} />
