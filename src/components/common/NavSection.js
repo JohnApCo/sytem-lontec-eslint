@@ -72,7 +72,7 @@ function NavItem({ item, active }) {
   };
 
   const activeRootStyle = {
-    color: 'primary.main',
+    color: 'primary.contrastText',
     fontWeight: 'fontWeightMedium',
     bgcolor: alpha(
       theme.palette.primary.main,

@@ -155,7 +155,7 @@ export default function DashboardSidebar({ isOpenSidebar, onCloseSidebar }) {
           sx={{
             '& .MuiDrawer-paper': {
               width: DRAWER_WIDTH,
-              backgroundColor: 'rgb(33, 43, 54)'
+              backgroundColor: 'rgba(34, 42, 69, 0.96)'
             }
           }}
         >
@@ -176,7 +176,7 @@ export default function DashboardSidebar({ isOpenSidebar, onCloseSidebar }) {
           sx={{
             '& .MuiDrawer-paper': {
               width: DRAWER_WIDTH,
-              backgroundColor: 'rgb(22, 28, 36)'
+              backgroundColor: 'rgba(34, 42, 69, 0.96)'
             }
           }}
         >
